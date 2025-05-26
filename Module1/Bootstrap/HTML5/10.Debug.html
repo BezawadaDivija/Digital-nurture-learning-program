@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debugging Demo</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: coral;
+      margin: 2rem auto;
+      text-align: center;
+      line-height: 100px;
+      color: white;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" onclick="changeColor()">Click Me</div>
+
+  <script>
+    console.log("Page loaded.");
+
+    function changeColor() {
+      const box = document.querySelector('.box');
+      console.log("Box clicked.");
+
+      const colors = ['coral', 'teal', 'slateblue', 'green'];
+      const current = box.style.backgroundColor || 'coral';
+      let nextIndex = (colors.indexOf(current) + 1) % colors.length;
+
+      console.log("Current color:", current);
+      console.log("Next color will be:", colors[nextIndex]);
+
+      // 🔍 Set a breakpoint here to inspect variables
+      box.style.backgroundColor = colors[nextIndex];
+    }
+  </script>
+
+</body>
+</html>
