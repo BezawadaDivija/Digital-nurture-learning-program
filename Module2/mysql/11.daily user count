@@ -1,0 +1,11 @@
+SELECT 
+    DATE(registration_date) AS reg_date,
+    COUNT(DISTINCT user_id) AS user_count
+FROM 
+    registrations
+WHERE 
+    registration_date >= CURRENT_DATE - INTERVAL 7 DAY
+GROUP BY 
+    DATE(registration_date)
+ORDER BY 
+    reg_date;
