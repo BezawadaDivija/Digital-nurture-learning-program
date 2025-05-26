@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Community Portal</title>
+
+  <style>
+    /* === Base Styles === */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 2vh;
+      text-align: center;
+    }
+
+    /* === Navigation (Flex Layout) === */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2vw;
+      background-color: #f0f0f0;
+      padding: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* === Responsive Content Layout === */
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 2vw;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 2vw;
+      margin: 1vw;
+      width: 30%;
+      min-width: 250px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-size: 2vw;
+      margin-top: 1rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+    }
+
+    /* === Media Query: Screens under 768px === */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin-bottom: 1vh;
+        font-size: 4vw;
+      }
+
+      .card {
+        width: 90%;
+      }
+
+      .card h3 {
+        font-size: 5vw;
+      }
+
+      .card p {
+        font-size: 4vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Riverdale Community Events</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Events</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Event 1">
+      <h3>Spring Festival</h3>
+      <p>Celebrate the season with food, music, and fun.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Event 2">
+      <h3>Community Cleanup</h3>
+      <p>Join neighbors in beautifying our shared spaces.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Event 3">
+      <h3>Art in the Park</h3>
+      <p>Local artists display their work in a family-friendly fair.</p>
+    </div>
+  </div>
+
+</body>
+</html>
