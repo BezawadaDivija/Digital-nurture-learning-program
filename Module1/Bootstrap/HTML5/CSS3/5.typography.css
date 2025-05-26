@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typography Enhancements</title>
+
+  <!-- Importing Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* === Base styles === */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 2rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* === Header styles === */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* === Subheading styles === */
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* === Description paragraph === */
+    .description {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.8;
+      text-align: justify;
+      letter-spacing: 0.5px;
+      text-transform: none;
+      max-width: 800px;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Riverdale Community Newsletter</h1>
+
+  <h2>Upcoming Events</h2>
+  <p class="description">
+    Discover a variety of fun and engaging activities happening throughout the city. 
+    Whether you're interested in art, sports, or local initiatives, there's something for everyone. 
+    Stay connected and make the most of your community!
+  </p>
+
+  <h2>Volunteer Opportunities</h2>
+  <p class="description">
+    Give back to the community by joining our volunteer programs. 
+    From park cleanups to mentor
