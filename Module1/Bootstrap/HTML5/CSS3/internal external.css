@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Inclusion Methods</title>
+
+  <!-- Internal CSS: Defines body background and reusable styles -->
+  <style>
+    /* === Page background === */
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    /* === Header styles === */
+    .main-heading {
+      color: navy;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    /* === Paragraph styles === */
+    .description {
+      color: #333;
+      font-style: italic;
+    }
+
+    /* === Card component === */
+    .card {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    .card-title {
+      color: darkgreen;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Inline CSS: One heading made red directly -->
+  <h1 style="color: red;">This heading uses inline CSS</h1>
+
+  <!-- Uses internal CSS with class -->
+  <h2 class="main-heading">This heading uses internal CSS (simulating external)</h2>
+
+  <p class="description">This paragraph is styled using reusable internal CSS classes.</p>
+
+  <div class="card">
+    <h3 class="card-title">Styled Card</h3>
+    <p>This content is styled using reusable internal CSS, similar to external CSS structure.</p>
+  </div>
+
+</body>
+</html>
