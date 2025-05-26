@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Promo Video</title>
+  <style>
+    .video-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    video {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+    #videoStatus {
+      font-weight: bold;
+      color: green;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-container">
+    <h2>Watch Our Event Promo</h2>
+
+    <!-- Video Element with Controls -->
+    <video id="promoVideo" width="400" controls oncanplay="videoReady()">
+      <source src="event_promo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Status Message -->
+    <p id="videoStatus"></p>
+  </div>
+
+  <script>
+    // Show message when video is ready
+    function videoReady() {
+      document.getElementById("videoStatus").textContent = "🎥 Video ready to play!";
+    }
+
+    // Warn user before leaving page
+    window.onbeforeunload = function () {
+      return "Are you sure you want to leave this page? Your form or video progress may be lost.";
+    };
+  </script>
+
+</body>
+</html>
