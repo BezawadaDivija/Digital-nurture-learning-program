@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Nearby Events</title>
+  <style>
+    .container {
+      max-width: 500px;
+      margin: 2rem auto;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Locate Nearby Events</h2>
+  <button onclick="findNearbyEvents()">Find Nearby Events</button>
+  <p id="output"></p>
+</div>
+
+<script>
+  function findNearbyEvents() {
+    const output = document.getElementById("output");
+
+    if (!navigator.geolocation) {
+      output.textContent = "Geolocation is not supported by your browser.";
+      return;
+    }
+
+    output.textContent = "Locating…";
+
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        const lat = position.coords.latitude.toFixed(5);
+        const lon = position.coords.longitude.toFixed(5);
+        output.textContent = `📍 Your location: Latitude ${lat}, Longitude ${lon}`;
+      },
+      error => {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            output.textContent = "❌ Permission denied. Please allow location access.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            output.textContent = "❌ Location unavailable.";
+            break;
+          case error.TIMEOUT:
+            output.textContent = "⏱️ Request timed out.";
+            break;
+          default:
+            output.textContent = "⚠️ An unknown error occurred.";
+        }
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      }
+    );
+  }
+</script>
+
+</body>
+</html>
