@@ -1,0 +1,15 @@
+SELECT 
+    u.user_id,
+    u.name AS user_name,
+    e.event_id,
+    e.event_name,
+    f.rating,
+    f.comment
+FROM 
+    feedback f
+JOIN 
+    users u ON f.user_id = u.user_id
+JOIN 
+    events e ON f.event_id = e.event_id
+WHERE 
+    f.rating < 3;
