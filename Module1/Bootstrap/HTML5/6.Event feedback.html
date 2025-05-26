@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Feedback</title>
+  <style>
+    form {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-family: Arial, sans-serif;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: 1px solid #888;
+      border-radius: 5px;
+    }
+    .feedback-img {
+      width: 100px;
+      cursor: pointer;
+      margin: 1rem auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h2>Event Feedback</h2>
+
+    <!-- Phone Number with onblur validation -->
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" placeholder="Enter 10-digit number" onblur="validatePhone()">
+
+    <!-- Event Type with onchange fee display -->
+    <label for="eventType">Select Event:</label>
+    <select id="eventType" onchange="displayFee()">
+      <option value="">-- Choose an event --</option>
+      <option value="Workshop">$20 - Workshop</option>
+      <option value="Concert">$50 - Concert</option>
+      <option value="Seminar">Free - Seminar</option>
+    </select>
+
+    <!-- Feedback Textarea with key events -->
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" rows="4" onkeyup="countCharacters()"></textarea>
+    <p>Characters typed: <span id="charCount">0</span></p>
+
+    <!-- Image with double-click enlargement -->
+    <img src="https://via.placeholder.com/100" class="feedback-img" ondblclick="toggleImageSize(this)" alt="Event Poster">
+
+    <!-- Submit button with confirmation -->
+    <button type="button" onclick="showConfirmation()">Submit Feedback</button>
+
+    <p id="confirmationMsg" style="color: green; font-weight: bold;"></p>
+  </form>
+
+  <script>
+    function validatePhone() {
+      const phone = document.getElementById('phone').value;
+      const isValid = /^\d{10}$/.test(phone);
+      if (!isValid) {
+        alert("Please enter a valid 10-digit phone number.");
+      }
+    }
+
+    function displayFee() {
+      const eventType = document.getElementById('eventType').value;
+      if (eventType) {
+        alert("Selected event: " + eventType);
+      }
+    }
+
+    function countCharacters() {
+      const text = document.getElementById('feedback').value;
+      document.getElementById('charCount').textContent = text.length;
+    }
+
+    function toggleImageSize(img) {
+      img.style.width = img.style.width === "100px" ? "200px" : "100px";
+    }
+
+    function showConfirmation() {
+      document.getElementById('confirmationMsg').textContent = "✅ Thank you for your feedback!";
+    }
+  </script>
+
+</body>
+</html>
