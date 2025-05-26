@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Event Portal</title>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <!-- Navigation links go here -->
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <!-- Page content goes here -->
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Footer information goes here -->
+  </footer>
+
+</body>
+</html>
