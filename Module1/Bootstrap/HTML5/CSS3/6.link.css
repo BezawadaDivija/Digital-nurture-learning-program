@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Link and List Styling</title>
+
+  <style>
+    /* === Link Styles === */
+    a:link {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #6f42c1;
+    }
+
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: #dc3545;
+    }
+
+    /* === General list item spacing === */
+    li {
+      padding: 6px 0;
+      margin-left: 20px;
+    }
+
+    /* === Styled unordered list with circle bullets and inside positioning === */
+    .custom-list {
+      list-style-type: circle;
+      list-style-position: inside;
+      margin-bottom: 2rem;
+    }
+
+    /* === Navigation menu without bullets === */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav li {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Menu (unstyled bullets) -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h2>Featured Event Links</h2>
+  <ul class="custom-list">
+    <li><a href="https://example.com/spring-fest" target="_blank">Spring Festival</a></li>
+    <li><a href="https://example.com/volunteer" target="_blank">Volunteer Signup</a></li>
+    <li><a href="https://example.com/newsletter" target="_blank">Join Newsletter</a></li>
+  </ul>
+
+</body>
+</html>
