@@ -1,0 +1,7 @@
+SELECT event_id, event_name, AVG(rating) AS avg_rating, COUNT(*) AS feedback_count
+FROM feedback
+JOIN events ON feedback.event_id = events.event_id
+GROUP BY event_id, event_name
+HAVING COUNT(*) >= 10
+ORDER BY avg_rating DESC
+LIMIT 1;
