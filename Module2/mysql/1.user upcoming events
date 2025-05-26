@@ -1,0 +1,7 @@
+SELECT e.event_id, e.event_name, e.event_date, e.city
+FROM events e
+JOIN registrations r ON e.event_id = r.event_id
+JOIN users u ON r.user_id = u.user_id
+WHERE e.event_date >= CURRENT_DATE
+  AND e.city = u.city
+ORDER BY e.event_date;
