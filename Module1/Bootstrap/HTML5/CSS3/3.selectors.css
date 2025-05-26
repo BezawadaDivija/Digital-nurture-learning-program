@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selectors Playground</title>
+
+  <style>
+    /* === Universal selector to reset default spacing === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* === ID selector for the main banner === */
+    #mainHeader {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* === Element selector for all h2 elements === */
+    h2 {
+      color: darkslategray;
+      margin-bottom: 1rem;
+    }
+
+    /* === Class selector for event cards === */
+    .eventCard {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      margin-bottom: 1rem;
+    }
+
+    /* === Grouping selector for h3 and p === */
+    h3, p {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="mainHeader">
+    <h1>Community Event Highlights</h1>
+  </div>
+
+  <div class="eventCard">
+    <h2>Spring Festival</h2>
+    <h3>April 15, 2025</h3>
+    <p>Enjoy music, food, and games with your neighbors!</p>
+  </div>
+
+  <div class="eventCard">
+    <h2>Volunteer Cleanup</h2>
+    <h3>May 5, 2025</h3>
+    <p>Help keep our parks beautiful. Tools and snacks provided.</p>
+  </div>
+
+</body>
+</html>
