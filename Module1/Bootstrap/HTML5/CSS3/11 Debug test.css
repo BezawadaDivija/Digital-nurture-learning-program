@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Debug & Test Responsive Layout</title>
+
+  <!-- Internal CSS for simplicity -->
+  <style>
+    /* === Base Styles === */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #e9ecef;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 2rem;
+      margin: 1rem auto;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* === Media Query for small screens === */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        padding: 1rem;
+        font-size: 0.95rem;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Community Portal</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Events</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <h2>Responsive Test</h2>
+      <p>
+        This section helps test layout issues on smaller screens.
+        Resize the browser or use Chrome DevTools → Device Toolbar to simulate phones or tablets.
+        Use the Elements and Network tabs to debug layout and style issues.
+      </p>
+    </div>
+  </main>
+
+</body>
+</html>
