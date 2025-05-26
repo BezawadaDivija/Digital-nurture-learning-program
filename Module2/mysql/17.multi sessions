@@ -1,0 +1,12 @@
+SELECT 
+    s.speaker_id,
+    sp.name AS speaker_name,
+    COUNT(s.session_id) AS session_count
+FROM 
+    sessions s
+JOIN 
+    speakers sp ON s.speaker_id = sp.speaker_id
+GROUP BY 
+    s.speaker_id, sp.name
+HAVING 
+    COUNT(s.session_id) > 1;
