@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model & Layout Control</title>
+  <style>
+    /* === Card Box Model Styling === */
+    .eventCard {
+      border: 2px solid #007BFF;
+      padding: 1rem;
+      margin: 2rem auto;
+      width: 80%;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    /* === Form Input Focus Outline === */
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #28a745;
+      border-color: #28a745;
+    }
+
+    /* === Visibility vs. Display Demo === */
+    .hidden-box {
+      background-color: #ffeeba;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 1px dashed #999;
+    }
+
+    .visibility-hidden {
+      visibility: hidden; /* Element exists, but invisible */
+    }
+
+    .display-none {
+      display: none; /* Element removed from layout flow */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="eventCard">
+    <h2>Spring Festival</h2>
+    <p>Join us for food, music, and fun at Central Park on April 10.</p>
+  </div>
+
+  <form style="width: 80%; margin: 2rem auto;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email" style="width: 100%; padding: 0.5rem;">
+  </form>
+
+  <div class="hidden-box visibility-hidden">
+    This box uses <strong>visibility: hidden</strong>. It takes up space but is not visible.
+  </div>
+
+  <div class="hidden-box display-none">
+    This box uses <strong>display: none</strong>. It is completely removed from the layout.
+  </div>
+
+</body>
+</html>
